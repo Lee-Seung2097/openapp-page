@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Taree Open</title>
 </head>
 
 <body>
 
+<button onclick="openApp()">
+  앱 열기
+</button>
+
 <script>
+
+function openApp() {
+
   window.location.href =
     "intent://main#Intent;scheme=taree;package=cc.taree.app;end";
+
+}
+
 </script>
 
 </body>
