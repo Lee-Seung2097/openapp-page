@@ -11,38 +11,9 @@
 
 <script>
 
-  let appOpened = false;
-
-  // 앱 열리면 감지
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      appOpened = true;
-    }
-  });
-
-  window.addEventListener("pagehide", () => {
-    appOpened = true;
-  });
-
-  window.addEventListener("blur", () => {
-    appOpened = true;
-  });
-
   // 앱 실행 시도
   window.location.href =
     "intent://main#Intent;scheme=taree;package=cc.taree.app;end";
-
-  // 일정 시간 후에도 앱 안 열렸으면 스토어 이동
-  setTimeout(() => {
-
-    if (!appOpened) {
-
-      window.location.href =
-        "https://play.google.com/store/apps/details?id=cc.taree.app";
-
-    }
-
-  }, 1500);
 
 </script>
 
