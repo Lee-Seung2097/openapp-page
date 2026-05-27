@@ -1,46 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
+  <meta charset="UTF-8">
   <title>Taree Open</title>
 </head>
 
 <body>
 
 <script>
-
-  let appOpened = false;
-
-  // 앱 열리면 브라우저 숨김 상태 감지
-  document.addEventListener("visibilitychange", () => {
-
-    if (document.hidden) {
-      appOpened = true;
-    }
-
-  });
-
-  // Android 앱 실행 시도
   window.location.href =
     "intent://main#Intent;scheme=taree;package=cc.taree.app;end";
-
-  // 실패 시 플레이스토어 이동
-  setTimeout(() => {
-
-    if (!appOpened) {
-
-      window.location.href =
-        "https://play.google.com/store/apps/details?id=cc.taree.app";
-
-    }
-
-  }, 2000);
-
 </script>
 
 </body>
